@@ -15,11 +15,11 @@
      limitations under the License.
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+        xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+        android:title="@string/ambient_display_title">
 
     <PreferenceCategory
-        android:key="ambient_display_key"
-        android:title="@string/ambient_display_title">
+        android:key="ambient_display_key">
 
        <SwitchPreference
            android:key="gesture_pick_up"
