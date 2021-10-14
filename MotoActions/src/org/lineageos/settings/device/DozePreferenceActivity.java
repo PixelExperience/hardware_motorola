@@ -17,19 +17,20 @@
 package org.lineageos.settings.device;
 
 import android.os.Bundle;
-import android.preference.PreferenceActivity;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceFragment;
 import android.view.MenuItem;
 
-public class DozePreferenceActivity extends PreferenceActivity {
+import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
+
+public class DozePreferenceActivity extends CollapsingToolbarBaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getActionBar().setDisplayHomeAsUpEnabled(true);
         getFragmentManager().beginTransaction()
-                .replace(android.R.id.content, new DozePreferenceFragment()).commit();
+                .replace(com.android.settingslib.collapsingtoolbar.R.id.content_frame,
+                new DozePreferenceFragment()).commit();
     }
 
     public static class DozePreferenceFragment extends PreferenceFragment {

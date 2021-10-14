@@ -16,11 +16,11 @@
      limitations under the License.
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+        xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+        android:title="@string/actions_title">
 
     <PreferenceCategory
-        android:key="actions_key"
-        android:title="@string/actions_title">
+        android:key="actions_key">
 
         <SwitchPreference
             android:key="gesture_camera_action"
