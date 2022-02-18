@@ -18,14 +18,14 @@
 package org.lineageos.settings.device;
 
 import android.os.Bundle;
-import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
+import android.preference.PreferenceActivity;
 
-public class ActionsPreferenceActivity extends CollapsingToolbarBaseActivity {
+public class ActionsPreferenceActivity extends PreferenceActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getFragmentManager().beginTransaction()
-            .replace(com.android.settingslib.collapsingtoolbar.R.id.content_frame, new ActionsPreferenceFragment()).commit();
+            .replace(android.R.id.content, new ActionsPreferenceFragment()).commit();
     }
 }
