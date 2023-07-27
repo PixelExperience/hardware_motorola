@@ -26,6 +26,7 @@ import android.os.IBinder;
 import android.os.PowerManager;
 import android.util.Log;
 
+import org.lineageos.settings.device.actions.CameraActivationSensor;
 import org.lineageos.settings.device.actions.ChopChopSensor;
 import org.lineageos.settings.device.actions.FlipToMute;
 import org.lineageos.settings.device.actions.LiftToSilence;
@@ -63,6 +64,7 @@ public class MotoActionsService extends Service implements ScreenStateNotifier,
         mScreenStateNotifiers.add(new FlatUpSensor(actionsSettings, sensorHelper, dozePulseAction));
 
         // Other actions that are always enabled
+        mUpdatedStateNotifiers.add(new CameraActivationSensor(actionsSettings, sensorHelper));
         mUpdatedStateNotifiers.add(new ChopChopSensor(actionsSettings, sensorHelper));
         mUpdatedStateNotifiers.add(new ProximitySilencer(actionsSettings, this, sensorHelper));
         mUpdatedStateNotifiers.add(new FlipToMute(actionsSettings, this, sensorHelper));
